@@ -20,12 +20,11 @@ while 1:
             B=rgb[2]
             brightness=math.sqrt(0.299*R*R + 0.587*G*G + 0.114*B*B )
             sum_brightness+=brightness
-    print sum_brightness
     average_brightness=sum_brightness/MAX_X/MAX_Y*increment*increment
     difference=255-average_brightness
     mean=difference/255
     brightness_set=0.3+mean
-    print brightness_set
+    print "Brightness set to " + str(brightness_set)
     stream = os.popen("xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1")
     DESKTOP_NAME = stream.readline()
     DESKTOP_NAME = DESKTOP_NAME.rstrip()
