@@ -5,6 +5,7 @@ import signal
 import sys
 import threading
 
+
 try:
     from PyQt4 import QtGui
 except ImportError:
